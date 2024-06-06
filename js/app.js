@@ -16,7 +16,8 @@ console.log(randomHexColor())
 
 function x() {
     clicButton.addEventListener('click', (event) => {
-        clicButton.style.backgroundColor = randomHexColor();
+        const newColor = randomHexColor()
+        clicButton.style.backgroundColor = newColor;
         document.getElementById('hexHead').textContent = randomHexColor()
     })
 }
