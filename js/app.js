@@ -1,7 +1,6 @@
-const clicButton = document.querySelector('body');
-// const hexLetters = ['A', 'B', 'C', 'D', 'E', 'F'].map(letter => letter.toLowerCase());
+const clicButton = document.querySelector('button');
 
-function randomHexColor(longitud = 6) {
+function randomHexCode(longitud = 6) {
     const hexLetters = 'abcdef0123456789'.toUpperCase();
     let result = '#';
     for (let i = 0; i < longitud; i++) {
@@ -10,16 +9,18 @@ function randomHexColor(longitud = 6) {
       return result;
 }
 
+console.log(randomHexCode())
 
+function randomHexColor() {
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const clicButton = document.getElementById('button');
 
-console.log(randomHexColor())
-
-function x() {
-    clicButton.addEventListener('click', (event) => {
-        const newColor = randomHexColor()
-        clicButton.style.backgroundColor = newColor;
-        document.getElementById('hexHead').textContent = randomHexColor()
-    })
+    clicButton.addEventListener('click', () => {
+        const newColor = randomHexCode()
+        document.body.style.backgroundColor = newColor;
+        document.getElementById('hexHead').textContent = randomHexCode()
+    });
+});
 }
 
-x();
+randomHexCode();
