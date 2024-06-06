@@ -23,4 +23,4 @@ function randomHexColor() {
 });
 }
 
-randomHexCode();
+randomHexColor();

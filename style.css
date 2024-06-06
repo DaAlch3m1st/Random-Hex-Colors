@@ -48,4 +48,5 @@ button {
     font-style: normal;
     font-size: 36px;
     background-color: #d91e11;
+    cursor: pointer;
 }
